@@ -3,6 +3,7 @@ package com.weight.watchers;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -27,6 +28,7 @@ public class MainActivity extends Activity {
 		//References to edittexts
 		exercise = (EditText) findViewById(R.id.mainExerciseEditText);
 		weight = (EditText) findViewById(R.id.mainWeightEditText);
+	
 		
 		//Reference to submit button
 		submit = (Button) findViewById(R.id.mainStartButton);
@@ -39,7 +41,9 @@ public class MainActivity extends Activity {
 				weightText = Integer.parseInt(weight.getText().toString());
 				
 				//Move to next activity
-				Intent i = new Intent();
+				Intent i = new Intent(MainActivity.this, RunActivity.class);
+				i.putExtra("exercise", exerciseText);
+				i.putExtra("weight", weightText);
 				startActivity(i);
 				
 			}
