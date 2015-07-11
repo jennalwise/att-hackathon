@@ -1,2 +1,3 @@
 # att-hackathon
-Our hackathon fun in Boston.
+Boston hackathon fun
+
