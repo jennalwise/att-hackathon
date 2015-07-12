@@ -26,6 +26,8 @@ public class LoadActivity extends Activity {
 			}
 		}, SPLASH_DELAY);		
 	}
+	
+	
 
 //		@Override
 //		public boolean onCreateOptionsMenu(Menu menu) {
